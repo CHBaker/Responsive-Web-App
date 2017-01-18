@@ -63,6 +63,12 @@ header {
     padding-left: 1px;
 }
 
+#menu {
+    padding: 5px;
+    padding-left: 0px;
+    height: 40px;
+}
+
 article {
     display: flex;
     display: -webkit-flex;
@@ -96,7 +102,6 @@ p{
 
 ._1 {
     width: 100%;
-    padding-top: 13px;
 }
 
 ._2 {
@@ -124,6 +129,20 @@ img {
     vertical-align: bottom;
 }
 
+a {
+    transition:all .5s ease;
+    -o-transition:all .5s ease;
+    -moz-transition:all .5s ease;
+    -webkit-transition:all .5s ease;
+}
+
+a:hover {
+    transform: translateY(-7.5px);
+    -o-transform: translateY(-7.5px);
+    -moz-transform: translateY(-7.5px);
+    -webkit-transform: translateY(-7.5px);
+}
+
 footer {
     display: flex;
     display: -webkit-flex;
@@ -135,6 +154,7 @@ footer {
     margin: 0 auto;
     border-top: 1.8px solid #99b4b4;
     padding-top: 5px;
+    order: 5;
 }
 
 .zocial-twitter {
@@ -184,11 +204,38 @@ footer {
 .side {
     background-color: #99b4b4;
     color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px 3px 3px 15px;
+    border: 1.5px solid white;
 }
 
 a#menu svg {
     width: 40px;
     fill: #000;
+}
+
+button {
+    transition:all .5s ease;
+    -o-transition:all .5s ease;
+    -moz-transition:all .5s ease;
+    -webkit-transition:all .5s ease;
+    background: white;
+    border: 3px solid white;
+}
+
+button:hover{
+    transition:all .5s ease;
+    -o-transition:all .5s ease;
+    -moz-transition:all .5s ease;
+    -webkit-transition:all .5s ease;
+    background: #99b4b4;
+    border: 3px solid white;
+    border-radius: 7px;
+}
+
+button:hover #touch {
+    fill: white;
 }
 
 nav, main {
@@ -212,6 +259,7 @@ nav {
     transform: translate(-400px, 0);
     /* Optionally, we animate the drawer. */
     transition: transform 0.3s ease;
+    display: block;
 }
 
 nav.open {
@@ -309,8 +357,18 @@ nav.open {
     p {
         font-size: 0.6em;
     }
+}
 
-     /* We open the drawer. */
+@media screen and (min-width: 1160px) {
+
+    ._1 {
+        padding-top: 13px;
+    }
+
+    button {
+        display: none;
+    }
+         /* We open the drawer. */
     nav {
       position:relative;
       -webkit-transform: translate(0, 0);
@@ -325,9 +383,10 @@ nav.open {
       flex-flow: row nowrap;
     }
 
-    main {
+    .container {
       width: auto;
       /* Flex-grow streches the main content to fill all available space. */
       flex-grow: 1;
     }
+
 }
