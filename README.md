@@ -6,7 +6,7 @@ Full documentation of the project and progress is available online at https://gi
 # CONFIGURATION
     Download the Git Zip or Clone the Repo from the URL above
     
-# INSTALATION
+# INSTALLATION
     No installation is required to run this app
     
     run through a local server if desired
